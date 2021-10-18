@@ -1,6 +1,9 @@
 .alert {
-  width: 100vw;
+  width: 75vw;
   height: 5vh;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 .alert-success {
@@ -14,4 +17,14 @@
   font-family: "Futura", Arial, sans-serif;
   font-weight: bold;
   font-size: 1.5em;
+}
+
+.flash {
+  list-style-type: none;
+  left: 0;
+}
+
+.flashes {
+  display: flex;
+  justify-content: center;
 }

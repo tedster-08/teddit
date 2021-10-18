@@ -5,25 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
-      rel="shortcut icon"
+      rel="favicon"
       href="{{ url_for('static', filename='favicon.png') }}"
     />
-    <link rel="stylesheet" href="static/style/main.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style/main.css') }}"
+    />
+    <script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
 
     <title>{% block title %} T! | {{ page_title }} {% endblock %}</title>
   </head>
+
   <body>
     {% with messages = get_flashed_messages(with_categories=true) %} {% if
-    messages %} {{ i = 0}} {% for category, message in messages %}
-    <div class="alert alert-{{category}}" id="alert-{{i}}">
-      <span class="alert-text">
-        {{ message }} [{{i}}]
-        <button class="close" onclick="hideAlert(alert);">
-          <span aria-hidden="true">&times; </span>
-        </button></span
-      >
-    </div>
-    {{ i += 1 }} {% endfor %} {% endif %} {% endwith %} {% block content %}
+    messages %}
+    <ul class="flashes">
+      {% for category, message in messages %}
+      <li class="flash">
+        <div class="alert alert-{{category}}" id="alert#{{message}}">
+          <span class="alert-text">
+            {{ message }}
+            <button class="close" onclick="hideAlert('alert#{{message}}');">
+              <span aria-hidden="true">&times; </span>
+            </button></span
+          >
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %} {% endwith %} {% block content %}
     <h1>I am a webpage</h1>
     <p>Wow!</p>
     {% endblock %}
