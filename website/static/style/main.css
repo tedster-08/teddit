@@ -1,0 +1,17 @@
+.alert {
+  width: 100vw;
+  height: 5vh;
+}
+
+.alert-success {
+  background-color: lightgreen;
+}
+
+.alert-error {
+  background-color: lightcoral;
+}
+.alert-text {
+  font-family: "Futura", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+}
