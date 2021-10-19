@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
-      rel="favicon"
+      rel="share icon"
       href="{{ url_for('static', filename='favicon.png') }}"
     />
     <link
@@ -20,15 +20,19 @@
   <body>
     {% with messages = get_flashed_messages(with_categories=true) %} {% if
     messages %}
-    <ul class="flashes">
+    <ul>
       {% for category, message in messages %}
       <li class="flash">
         <div class="alert alert-{{category}}" id="alert#{{message}}">
           <span class="alert-text">
             {{ message }}
-            <button class="close" onclick="hideAlert('alert#{{message}}');">
-              <span aria-hidden="true">&times; </span>
-            </button></span
+            <span
+              class="close"
+              aria-hidden="true"
+              onclick="hideAlert('alert#{{message}}');"
+            >
+              &times;
+            </span></span
           >
         </div>
       </li>
