@@ -3,7 +3,7 @@
   border-radius: 5px;
   display: flex;
   justify-content: center;
-  margin: 0.25em;
+  margin: 0.5em;
 }
 
 .alert-success {
@@ -18,7 +18,7 @@
 .alert-text {
   font-family: "Futura", Arial, sans-serif;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1.25em;
 }
 
 .flash {
@@ -32,4 +32,45 @@
 }
 .alert-success .close {
   color: rgb(80, 255, 80);
+}
+
+h1 {
+  font: bold 1.75em "Futura";
+}
+
+.sign-up-form {
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  font: 1.25em Arial, sans-serif;
+}
+
+.form-text {
+  border-radius: 5px;
+  border: 2px solid lightgrey;
+  font: lighter 1.1em Arial, sans-serif;
+}
+
+.form-text:focus {
+  border: 2px solid dodgerblue;
+  outline: none;
+}
+
+.submit {
+  font: 1.25em Arial, sans-serif;
+  margin: 0.5em;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+}
+
+.submit:hover {
+  background-color: steelblue;
+}
+.submit:active {
+  background-color: steelblue;
 }
