@@ -32,9 +32,12 @@
           </div>
         </a>
         <div class="nav-link-box">
+          {% if not user.is_authenticated %}
           <a href="/signup" class="navbar-link">Sign Up</a>
           <a href="/login" class="navbar-link">Login</a>
+          {% else %}
           <a href="/logout" class="navbar-link">Logout</a>
+          {% endif %}
         </div>
       </nav>
     </div>

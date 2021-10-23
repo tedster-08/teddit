@@ -128,3 +128,9 @@ label {
 .submit:active {
   background-color: steelblue;
 }
+
+.auth-link {
+  font: 1em Arial, sans-serif;
+  color: dodgerblue;
+  text-decoration: none;
+}
