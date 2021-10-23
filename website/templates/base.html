@@ -18,6 +18,29 @@
   </head>
 
   <body>
+    <!-- navbar // -->
+    <div class="navbar-div">
+      <nav class="navbar">
+        <a href="/">
+          <div class="logo-link-box">
+            <img
+              class="logo-link"
+              src="{{ url_for('static', filename='assets/images/logo.png') }}"
+              alt="Home"
+            />
+            <span class="logo-text"> Teddit! </span>
+          </div>
+        </a>
+        <div class="nav-link-box">
+          <a href="/signup" class="navbar-link">Sign Up</a>
+          <a href="/login" class="navbar-link">Login</a>
+          <a href="/logout" class="navbar-link">Logout</a>
+        </div>
+      </nav>
+    </div>
+    <!-- // navbar -->
+
+    <!-- flash messages // -->
     {% with messages = get_flashed_messages(with_categories=true) %} {% if
     messages %}
     <ul>
@@ -38,7 +61,9 @@
       </li>
       {% endfor %}
     </ul>
-    {% endif %} {% endwith %} {% block content %}
+    {% endif %} {% endwith %}
+    <!-- // flash messages -->
+    {% block content %}
     <h1>I am a webpage</h1>
     <p>Wow!</p>
     {% endblock %}

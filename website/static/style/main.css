@@ -1,3 +1,58 @@
+.navbar-div {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  width: 95vw;
+  height: 5vh;
+  background-color: lightgray;
+  border-radius: 5px;
+}
+
+.logo-link-box {
+  background-color: white;
+  min-width: 2.5em;
+  height: 2.2em;
+  top: 50%;
+  transform: translateY(10%);
+  left: 10%;
+  line-height: 5vh;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  float: left;
+  margin: 0 0.5em 0 0.5em;
+}
+
+.logo-link {
+  width: 2.15em;
+  height: 2.15em;
+}
+
+.logo-text {
+  font: bold 1.25em "Arial Black";
+  color: rgb(60, 65, 70);
+  margin: 0 0.5em 0 0.5em;
+  top: 50%;
+}
+
+.nav-link-box {
+  float: right;
+}
+
+.navbar-link {
+  font: 1.25em Arial, sans-serif;
+  color: rgb(60, 65, 70);
+  text-decoration: none;
+  margin: 0 0.5em 0 0.5em;
+  line-height: 5vh;
+}
+
+.navbar-link:hover {
+  color: gray;
+}
+
 .alert {
   min-width: 50vw;
   border-radius: 5px;
@@ -60,7 +115,6 @@ label {
 
 .submit {
   font: 1.25em Arial, sans-serif;
-  margin: 0.5em;
   background-color: dodgerblue;
   color: white;
   border-radius: 5px;
