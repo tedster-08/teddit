@@ -21,10 +21,16 @@ def signup():
         password = request.form.get("password")
         password_conf = request.form.get("password-conf")
 
-        if password == "":
+        if email == "":
+            flash("Enter an email!", category="error")
+        elif username == "":
+            flash("Enter a username!", category="error")
+        elif password == "":
             flash("Enter a password!", category="error")
         elif password != password_conf:
             flash("Passwords don't match!", category="error")
+        elif len(password) < 3:
+            flash("Password must be at least 3 characters")
         else:
             flash("Account created.", category="success")
     return render_template("signup.html", page_title="Sign Up")
