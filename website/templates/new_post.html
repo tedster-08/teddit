@@ -3,9 +3,17 @@
 {% endblock %} {% block content %}
 <form method="POST" class="new-post-form">
   <div>
-    <textarea class="new-post-text"> </textarea>
+    <input
+      type="text"
+      id="title"
+      name="title"
+      placeholder="Post title"
+      class="form-text post-title"
+    />
     <br />
-    <button type="submit" class="submit">Post</button>
+    <textarea class="new-post-text" placeholder="Post"></textarea>
+    <br />
+    <button type="submit" class="submit post">Post</button>
   </div>
 </form>
 {% endblock %}

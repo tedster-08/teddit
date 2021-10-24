@@ -92,10 +92,14 @@
 .centerer-div {
   width: 50%;
   left: 50%;
-  transform: translateX(50%);
+  transform: translateX(-50%);
   margin: 0;
   display: flex;
   justify-content: center;
+}
+
+.heading {
+  transform: translateX(50%);
 }
 
 .content {
@@ -122,7 +126,26 @@ label {
 }
 
 .form-text:focus {
-  border: 2px solid dodgerblue;
+  border-color: dodgerblue;
+  outline: none;
+}
+
+.post-title {
+  width: 35vw;
+  font-size: 1.25em;
+}
+
+.new-post-text {
+  border-radius: 5px;
+  border: 2px solid lightgray;
+  width: 35vw;
+  resize: none;
+  min-height: 20vh;
+  font: 1.25em Arial, sans-serif;
+}
+
+.new-post-text:focus {
+  border-color: dodgerblue;
   outline: none;
 }
 
@@ -140,6 +163,13 @@ label {
 }
 .submit:active {
   background-color: steelblue;
+}
+
+.post {
+  font-size: 1.5em;
+  width: 35vw;
+  margin: 0.15em;
+  padding: 0.25em;
 }
 
 .auth-link {
