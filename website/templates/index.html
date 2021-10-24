@@ -1,6 +1,22 @@
 {% extends "base.html" %} {% block title %} Teddit! {% endblock %} {% block
-content %}
+content %} {% if posts %}
 
-<h1>Homepage</h1>
+<ul>
+  {% for post in posts %}
+  <li class="post">
+    <div class="post-heading">
+      <span class="post-title"> {{post.title}} </span>
+      <span class="poster">
+        by {{user_cls.query.get(post.user_id).username}}
+      </span>
+      <span class="post-date">on {{post.date}} </span>
+    </div>
+    <div class="post-body">{{post.text}}</div>
+    <br />
+  </li>
+  {% endfor %}
+</ul>
 
-{% endblock %}
+{% else %}
+<h1>This page is empty &smile;</h1>
+{% endif %} {% endblock %}

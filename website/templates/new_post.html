@@ -5,15 +5,20 @@
   <div>
     <input
       type="text"
-      id="title"
-      name="title"
+      id="post-title"
+      name="post-title"
       placeholder="Post title"
-      class="form-text post-title"
+      class="form-text post-title-input"
     />
     <br />
-    <textarea class="new-post-text" placeholder="Post"></textarea>
+    <textarea
+      class="new-post-text"
+      placeholder="Post"
+      name="post-text"
+      id="post-text"
+    ></textarea>
     <br />
-    <button type="submit" class="submit post">Post</button>
+    <button type="submit" class="submit post-btn">Post</button>
   </div>
 </form>
 {% endblock %}

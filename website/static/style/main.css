@@ -130,7 +130,7 @@ label {
   outline: none;
 }
 
-.post-title {
+.post-title-input {
   width: 35vw;
   font-size: 1.25em;
 }
@@ -165,7 +165,7 @@ label {
   background-color: steelblue;
 }
 
-.post {
+.post-btn {
   font-size: 1.5em;
   width: 35vw;
   margin: 0.15em;
@@ -176,4 +176,13 @@ label {
   font: 1em Arial, sans-serif;
   color: dodgerblue;
   text-decoration: none;
+}
+
+.post {
+  font: 1em Arial, sans-serif;
+  float: none;
+}
+
+.post-title {
+  font-size: 1.25em;
 }
