@@ -89,6 +89,27 @@
   color: rgb(80, 255, 80);
 }
 
+.heading {
+  width: 50%;
+  background-color: whitesmoke;
+  left: 50%;
+  transform: translateX(50%);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 50%;
+  background-color: whitesmoke;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
 h1 {
   font: bold 1.75em "Futura";
 }

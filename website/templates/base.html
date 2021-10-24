@@ -67,9 +67,12 @@
     </ul>
     {% endif %} {% endwith %}
     <!-- // flash messages -->
-    {% block content %}
-    <h1>I am a webpage</h1>
-    <p>Wow!</p>
-    {% endblock %}
+
+    <div class="heading">{% block heading %} {% endblock %}</div>
+    <div class="content">
+      {% block content %}
+      <p>webpage lol</p>
+      {% endblock %}
+    </div>
   </body>
 </html>
