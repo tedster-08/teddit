@@ -180,9 +180,30 @@ label {
 
 .post {
   font: 1em Arial, sans-serif;
-  float: none;
+  list-style-type: none;
+  border: 2px solid gray;
+  padding: 0.15em;
+  border-radius: 5px;
+  min-width: 25%;
 }
 
 .post-title {
   font-size: 1.25em;
+}
+
+.post-heading {
+  border-bottom: 2px solid gray;
+}
+.post-data {
+  color: gray;
+}
+.post-body {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.delete-post {
+  background-color: transparent;
+  border: none;
+  font: bold 1em "Futura", sans-serif;
 }

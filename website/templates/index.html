@@ -6,17 +6,26 @@ content %} {% if posts %}
   <li class="post">
     <div class="post-heading">
       <span class="post-title"> {{post.title}} </span>
-      <span class="poster">
-        by {{user_cls.query.get(post.user_id).username}}
+      <span class="post-data">
+        <span class="poster">
+          by {{user_cls.query.get(post.user_id).username}}
+        </span>
+        <span class="post-date"> on {{post.date}} </span>
       </span>
-      <span class="post-date">on {{post.date}} </span>
+
+      {% if user_cls.query.get(post.user_id).id == user.id%}
+      <button class="delete-post" onclick="deletePost({{post.id}});">
+        &times;
+      </button>
+      {% endif %}
     </div>
     <div class="post-body">{{post.text}}</div>
-    <br />
   </li>
+  <br />
+  <br />
   {% endfor %}
 </ul>
 
 {% else %}
-<h1>This page is empty &smile;</h1>
+<h1>There are no posts here :(</h1>
 {% endif %} {% endblock %}
