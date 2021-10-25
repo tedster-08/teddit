@@ -206,4 +206,5 @@ label {
   background-color: transparent;
   border: none;
   font: bold 1em "Futura", sans-serif;
+  float: right;
 }
