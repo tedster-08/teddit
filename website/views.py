@@ -14,7 +14,7 @@ def home():
     return render_template("index.html", user=current_user, posts=posts, user_cls=User)
 
 
-@views.route("/post", methods=["GET", "POST"])
+@views.route("/post/", methods=["GET", "POST"])
 def new_post():
     if request.method == "POST":
         post_title = request.form.get("post-title")
@@ -35,7 +35,7 @@ def new_post():
     return render_template("new_post.html", page_title="New Post", user=current_user,)
 
 
-@views.route('/delete-post',  methods=["POST"])
+@views.route('/delete-post/',  methods=["POST"])
 def delete_post():
     data = json.loads(request.data)
     post_id = data['id']
@@ -45,3 +45,8 @@ def delete_post():
             db.session.delete(post)
             db.session.commit()
             return jsonify({})
+
+
+@views.route('/profiles/<username>/')
+def user_page(username):
+    return username

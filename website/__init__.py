@@ -1,7 +1,7 @@
-from flask import Flask
+from flask import Flask, render_template
 from os import path
 from flask_sqlalchemy import SQLAlchemy
-from flask_login import LoginManager
+from flask_login import LoginManager, current_user
 
 db = SQLAlchemy()
 DB_NAME = "database.db"
@@ -31,6 +31,10 @@ def create_app():
     @login_manager.user_loader
     def load_user(id):
         return models.User.query.get(int(id))
+
+    @app.errorhandler(404)
+    def error404(e):
+        return render_template("404.html", page_title="404", user=current_user), 404
 
     return app
 
