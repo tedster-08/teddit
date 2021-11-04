@@ -17,3 +17,4 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(128))
     username = db.Column(db.String(128), unique=True)
     posts = db.relationship('Post')
+    pfp_filename = db.Column(db.String(128))

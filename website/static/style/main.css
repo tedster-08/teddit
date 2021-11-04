@@ -189,12 +189,16 @@ label {
 
 .post-title {
   font-size: 1.25em;
+  font-weight: bold;
 }
 
 .post-heading {
   border-bottom: 2px solid gray;
 }
 .post-data {
+  color: gray;
+}
+.poster:visited {
   color: gray;
 }
 .post-body {
@@ -207,4 +211,9 @@ label {
   border: none;
   font: bold 1em "Futura", sans-serif;
   float: right;
+}
+
+.pfp {
+  width: 64px;
+  height: auto;
 }

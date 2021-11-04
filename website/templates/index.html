@@ -8,7 +8,12 @@ content %} {% if posts %}
       <span class="post-title"> {{post.title}} </span>
       <span class="post-data">
         <span class="poster">
-          by {{user_cls.query.get(post.user_id).username}}
+          by
+          <a
+            class="poster"
+            href="/profiles/{{user_cls.query.get(post.user_id).username}}"
+            >{{user_cls.query.get(post.user_id).username}}
+          </a>
         </span>
         <span class="post-date"> on {{post.date}} </span>
       </span>
